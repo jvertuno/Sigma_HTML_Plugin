@@ -8,7 +8,17 @@ function App() {
   if (!data || data.length === 0) return <div>No data available</div>;
 
   const rawText = data[0][columns[0].name];
-  const htmlContent = `<div style="font-family:Arial; font-size:16px; color:#333;">${rawText}</div>`;
+  const htmlContent = `
+    <div style=" 
+      font-family: Arial; 
+      font-size: 16px; 
+      color: #333; 
+      background-color: white; 
+      text-align: left; 
+     "> 
+       ${rawText} 
+      </div>
+    `;
 
   return (
     <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
